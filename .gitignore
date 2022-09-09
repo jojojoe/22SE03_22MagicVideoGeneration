@@ -1,0 +1,7 @@
+AHanimalHilight.xcodeproj/xcuserdata/
+AHanimalHilight.xcworkspace/
+Pods/
+*.swp
+Podfile.lock
+.DS_Store
+AHanimalHilight.xcodeproj/project.xcworkspace/xcuserdata/

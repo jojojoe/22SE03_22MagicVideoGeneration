@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CCCB70CCBF1AB19FB437CFF1 /* Pods_AHanimalHilight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D954A34968940B04BDADD69D /* Pods_AHanimalHilight.framework */; };
+		EB9C326C28C5EDC0003C63A9 /* AHanimaVideoPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9C326B28C5EDC0003C63A9 /* AHanimaVideoPreviewVC.swift */; };
+		EB9C32AD28C736E3003C63A9 /* AHanimaSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9C32AC28C736E3003C63A9 /* AHanimaSettingVC.swift */; };
+		EB9C32AF28C749BF003C63A9 /* AHanimaAddTextAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9C32AE28C749BF003C63A9 /* AHanimaAddTextAlertView.swift */; };
+		EB9C32B128C750F7003C63A9 /* AHanimaColorCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9C32B028C750F7003C63A9 /* AHanimaColorCollection.swift */; };
+		EB9C32B328C75108003C63A9 /* AHanimaFontCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9C32B228C75108003C63A9 /* AHanimaFontCollection.swift */; };
+		EB9C32B528C84216003C63A9 /* AHanimaVideoOnlySaveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9C32B428C84216003C63A9 /* AHanimaVideoOnlySaveVC.swift */; };
+		EB9C32B828C895CD003C63A9 /* TextAnimationBaseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9C32B628C895CD003C63A9 /* TextAnimationBaseLayer.swift */; };
+		EB9C32B928C895CD003C63A9 /* TextlayerAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9C32B728C895CD003C63A9 /* TextlayerAnimate.swift */; };
+		EB9C32BC28CAD57E003C63A9 /* moreicon.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9C32BA28CAD57B003C63A9 /* moreicon.png */; };
+		EB9C32BD28CAD57E003C63A9 /* toptop.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9C32BB28CAD57B003C63A9 /* toptop.png */; };
+		EB9C32C028CAD588003C63A9 /* settingitng.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9C32BE28CAD587003C63A9 /* settingitng.png */; };
+		EB9C32C128CAD588003C63A9 /* enterpig.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9C32BF28CAD588003C63A9 /* enterpig.png */; };
+		EB9C32C428CAD58F003C63A9 /* big.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9C32C228CAD58E003C63A9 /* big.png */; };
+		EB9C32C528CAD58F003C63A9 /* photo.svg in Resources */ = {isa = PBXBuildFile; fileRef = EB9C32C328CAD58F003C63A9 /* photo.svg */; };
+		EB9C32C828CAD596003C63A9 /* 500error.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9C32C628CAD596003C63A9 /* 500error.png */; };
+		EB9C32C928CAD596003C63A9 /* mine.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9C32C728CAD596003C63A9 /* mine.png */; };
+		EB9C32CC28CAD5A0003C63A9 /* IMG_0405.JPG in Resources */ = {isa = PBXBuildFile; fileRef = EB9C32CA28CAD59F003C63A9 /* IMG_0405.JPG */; };
+		EB9C32CD28CAD5A0003C63A9 /* 404error.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9C32CB28CAD5A0003C63A9 /* 404error.png */; };
+		EBA63A7128BC95B50069435E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA63A7028BC95B50069435E /* AppDelegate.swift */; };
+		EBA63A7328BC95B50069435E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA63A7228BC95B50069435E /* SceneDelegate.swift */; };
+		EBA63A7528BC95B50069435E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA63A7428BC95B50069435E /* ViewController.swift */; };
+		EBA63A7828BC95B50069435E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBA63A7628BC95B50069435E /* Main.storyboard */; };
+		EBA63A7A28BC95B80069435E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA63A7928BC95B80069435E /* Assets.xcassets */; };
+		EBA63A7D28BC95B80069435E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBA63A7B28BC95B80069435E /* LaunchScreen.storyboard */; };
+		EBA63A8D28BC9B560069435E /* AHaniHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA63A8B28BC9B560069435E /* AHaniHomeVC.swift */; };
+		EBA63A8E28BC9B560069435E /* AHanimaBgScreenEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA63A8C28BC9B560069435E /* AHanimaBgScreenEditVC.swift */; };
+		EBA63A9228BCA8920069435E /* AHanimaCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA63A9128BCA8920069435E /* AHanimaCollectionView.swift */; };
+		EBA63A9428BDA94D0069435E /* AHanimaCollecToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA63A9328BDA94D0069435E /* AHanimaCollecToolView.swift */; };
+		EBB8B51928C5A730001C4C04 /* AnimationVideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8B51828C5A730001C4C04 /* AnimationVideoManager.swift */; };
+		EBB8B51B28C5A968001C4C04 /* AHanimaVideoAddTextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8B51A28C5A968001C4C04 /* AHanimaVideoAddTextVC.swift */; };
+		EBC9C38128C1D729008DB3DF /* SwiftTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC9C38028C1D729008DB3DF /* SwiftTimer.swift */; };
+		EBC9C38328C204E1008DB3DF /* AHanimaStickerToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC9C38228C204E1008DB3DF /* AHanimaStickerToolView.swift */; };
+		EBC9C38928C20E41008DB3DF /* ManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC9C38828C20E41008DB3DF /* ManagerExtension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		38C497775EAD7D7D99EA1533 /* Pods-AHanimalHilight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AHanimalHilight.release.xcconfig"; path = "Target Support Files/Pods-AHanimalHilight/Pods-AHanimalHilight.release.xcconfig"; sourceTree = "<group>"; };
+		797A394669B8B02510DDCF78 /* Pods-AHanimalHilight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AHanimalHilight.debug.xcconfig"; path = "Target Support Files/Pods-AHanimalHilight/Pods-AHanimalHilight.debug.xcconfig"; sourceTree = "<group>"; };
+		D954A34968940B04BDADD69D /* Pods_AHanimalHilight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AHanimalHilight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB9C326B28C5EDC0003C63A9 /* AHanimaVideoPreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHanimaVideoPreviewVC.swift; sourceTree = "<group>"; };
+		EB9C32AC28C736E3003C63A9 /* AHanimaSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHanimaSettingVC.swift; sourceTree = "<group>"; };
+		EB9C32AE28C749BF003C63A9 /* AHanimaAddTextAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHanimaAddTextAlertView.swift; sourceTree = "<group>"; };
+		EB9C32B028C750F7003C63A9 /* AHanimaColorCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHanimaColorCollection.swift; sourceTree = "<group>"; };
+		EB9C32B228C75108003C63A9 /* AHanimaFontCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHanimaFontCollection.swift; sourceTree = "<group>"; };
+		EB9C32B428C84216003C63A9 /* AHanimaVideoOnlySaveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHanimaVideoOnlySaveVC.swift; sourceTree = "<group>"; };
+		EB9C32B628C895CD003C63A9 /* TextAnimationBaseLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAnimationBaseLayer.swift; sourceTree = "<group>"; };
+		EB9C32B728C895CD003C63A9 /* TextlayerAnimate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextlayerAnimate.swift; sourceTree = "<group>"; };
+		EB9C32BA28CAD57B003C63A9 /* moreicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moreicon.png; sourceTree = "<group>"; };
+		EB9C32BB28CAD57B003C63A9 /* toptop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toptop.png; sourceTree = "<group>"; };
+		EB9C32BE28CAD587003C63A9 /* settingitng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingitng.png; sourceTree = "<group>"; };
+		EB9C32BF28CAD588003C63A9 /* enterpig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enterpig.png; sourceTree = "<group>"; };
+		EB9C32C228CAD58E003C63A9 /* big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = big.png; sourceTree = "<group>"; };
+		EB9C32C328CAD58F003C63A9 /* photo.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = photo.svg; sourceTree = "<group>"; };
+		EB9C32C628CAD596003C63A9 /* 500error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 500error.png; sourceTree = "<group>"; };
+		EB9C32C728CAD596003C63A9 /* mine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine.png; sourceTree = "<group>"; };
+		EB9C32CA28CAD59F003C63A9 /* IMG_0405.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0405.JPG; sourceTree = "<group>"; };
+		EB9C32CB28CAD5A0003C63A9 /* 404error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 404error.png; sourceTree = "<group>"; };
+		EBA63A6D28BC95B50069435E /* AHanimalHilight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AHanimalHilight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBA63A7028BC95B50069435E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EBA63A7228BC95B50069435E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EBA63A7428BC95B50069435E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EBA63A7728BC95B50069435E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EBA63A7928BC95B80069435E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EBA63A7C28BC95B80069435E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EBA63A7E28BC95B80069435E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBA63A8B28BC9B560069435E /* AHaniHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AHaniHomeVC.swift; sourceTree = "<group>"; };
+		EBA63A8C28BC9B560069435E /* AHanimaBgScreenEditVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AHanimaBgScreenEditVC.swift; sourceTree = "<group>"; };
+		EBA63A9128BCA8920069435E /* AHanimaCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHanimaCollectionView.swift; sourceTree = "<group>"; };
+		EBA63A9328BDA94D0069435E /* AHanimaCollecToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHanimaCollecToolView.swift; sourceTree = "<group>"; };
+		EBB8B51828C5A730001C4C04 /* AnimationVideoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationVideoManager.swift; sourceTree = "<group>"; };
+		EBB8B51A28C5A968001C4C04 /* AHanimaVideoAddTextVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHanimaVideoAddTextVC.swift; sourceTree = "<group>"; };
+		EBC9C38028C1D729008DB3DF /* SwiftTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftTimer.swift; sourceTree = "<group>"; };
+		EBC9C38228C204E1008DB3DF /* AHanimaStickerToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHanimaStickerToolView.swift; sourceTree = "<group>"; };
+		EBC9C38828C20E41008DB3DF /* ManagerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerExtension.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBA63A6A28BC95B50069435E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCCB70CCBF1AB19FB437CFF1 /* Pods_AHanimalHilight.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		35A6B7AB0AA660548C20DEE4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				797A394669B8B02510DDCF78 /* Pods-AHanimalHilight.debug.xcconfig */,
+				38C497775EAD7D7D99EA1533 /* Pods-AHanimalHilight.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4E4CA445487822F750B07A36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D954A34968940B04BDADD69D /* Pods_AHanimalHilight.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBA63A6428BC95B50069435E = {
+			isa = PBXGroup;
+			children = (
+				EBA63A6F28BC95B50069435E /* AHanimalHilight */,
+				EBA63A6E28BC95B50069435E /* Products */,
+				35A6B7AB0AA660548C20DEE4 /* Pods */,
+				4E4CA445487822F750B07A36 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EBA63A6E28BC95B50069435E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBA63A6D28BC95B50069435E /* AHanimalHilight.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBA63A6F28BC95B50069435E /* AHanimalHilight */ = {
+			isa = PBXGroup;
+			children = (
+				EBC9C37F28C1D71D008DB3DF /* ManagerExtension */,
+				EBA63A9028BCA8580069435E /* Views */,
+				EBA63A8A28BC9B560069435E /* Controller */,
+				EBA63A8428BC95EE0069435E /* RootomGroup */,
+			);
+			path = AHanimalHilight;
+			sourceTree = "<group>";
+		};
+		EBA63A8428BC95EE0069435E /* RootomGroup */ = {
+			isa = PBXGroup;
+			children = (
+				EB9C32C628CAD596003C63A9 /* 500error.png */,
+				EB9C32C728CAD596003C63A9 /* mine.png */,
+				EB9C32CB28CAD5A0003C63A9 /* 404error.png */,
+				EB9C32CA28CAD59F003C63A9 /* IMG_0405.JPG */,
+				EBA63A7028BC95B50069435E /* AppDelegate.swift */,
+				EBA63A7228BC95B50069435E /* SceneDelegate.swift */,
+				EBA63A7428BC95B50069435E /* ViewController.swift */,
+				EBA63A7628BC95B50069435E /* Main.storyboard */,
+				EBA63A7928BC95B80069435E /* Assets.xcassets */,
+				EBA63A7B28BC95B80069435E /* LaunchScreen.storyboard */,
+				EBA63A7E28BC95B80069435E /* Info.plist */,
+			);
+			name = RootomGroup;
+			sourceTree = "<group>";
+		};
+		EBA63A8A28BC9B560069435E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EB9C32C228CAD58E003C63A9 /* big.png */,
+				EB9C32C328CAD58F003C63A9 /* photo.svg */,
+				EBA63A8B28BC9B560069435E /* AHaniHomeVC.swift */,
+				EB9C32AC28C736E3003C63A9 /* AHanimaSettingVC.swift */,
+				EBA63A8C28BC9B560069435E /* AHanimaBgScreenEditVC.swift */,
+				EBB8B51A28C5A968001C4C04 /* AHanimaVideoAddTextVC.swift */,
+				EB9C326B28C5EDC0003C63A9 /* AHanimaVideoPreviewVC.swift */,
+				EB9C32B428C84216003C63A9 /* AHanimaVideoOnlySaveVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EBA63A9028BCA8580069435E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EB9C32BF28CAD588003C63A9 /* enterpig.png */,
+				EB9C32BE28CAD587003C63A9 /* settingitng.png */,
+				EBA63A9128BCA8920069435E /* AHanimaCollectionView.swift */,
+				EBA63A9328BDA94D0069435E /* AHanimaCollecToolView.swift */,
+				EBC9C38228C204E1008DB3DF /* AHanimaStickerToolView.swift */,
+				EB9C32AE28C749BF003C63A9 /* AHanimaAddTextAlertView.swift */,
+				EB9C32B028C750F7003C63A9 /* AHanimaColorCollection.swift */,
+				EB9C32B228C75108003C63A9 /* AHanimaFontCollection.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EBC9C37F28C1D71D008DB3DF /* ManagerExtension */ = {
+			isa = PBXGroup;
+			children = (
+				EBC9C38028C1D729008DB3DF /* SwiftTimer.swift */,
+				EBC9C38828C20E41008DB3DF /* ManagerExtension.swift */,
+				EBB8B51828C5A730001C4C04 /* AnimationVideoManager.swift */,
+				EB9C32B628C895CD003C63A9 /* TextAnimationBaseLayer.swift */,
+				EB9C32B728C895CD003C63A9 /* TextlayerAnimate.swift */,
+				EB9C32BA28CAD57B003C63A9 /* moreicon.png */,
+				EB9C32BB28CAD57B003C63A9 /* toptop.png */,
+			);
+			path = ManagerExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBA63A6C28BC95B50069435E /* AHanimalHilight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBA63A8128BC95B80069435E /* Build configuration list for PBXNativeTarget "AHanimalHilight" */;
+			buildPhases = (
+				FDD2D47B5360B18DC9CB0B4E /* [CP] Check Pods Manifest.lock */,
+				EBA63A6928BC95B50069435E /* Sources */,
+				EBA63A6A28BC95B50069435E /* Frameworks */,
+				EBA63A6B28BC95B50069435E /* Resources */,
+				C57C6A86735401BF3ABEDA92 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AHanimalHilight;
+			productName = AHanimalHilight;
+			productReference = EBA63A6D28BC95B50069435E /* AHanimalHilight.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBA63A6528BC95B50069435E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					EBA63A6C28BC95B50069435E = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = EBA63A6828BC95B50069435E /* Build configuration list for PBXProject "AHanimalHilight" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBA63A6428BC95B50069435E;
+			productRefGroup = EBA63A6E28BC95B50069435E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBA63A6C28BC95B50069435E /* AHanimalHilight */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBA63A6B28BC95B50069435E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB9C32CC28CAD5A0003C63A9 /* IMG_0405.JPG in Resources */,
+				EB9C32BD28CAD57E003C63A9 /* toptop.png in Resources */,
+				EB9C32CD28CAD5A0003C63A9 /* 404error.png in Resources */,
+				EBA63A7D28BC95B80069435E /* LaunchScreen.storyboard in Resources */,
+				EBA63A7A28BC95B80069435E /* Assets.xcassets in Resources */,
+				EB9C32C928CAD596003C63A9 /* mine.png in Resources */,
+				EBA63A7828BC95B50069435E /* Main.storyboard in Resources */,
+				EB9C32C428CAD58F003C63A9 /* big.png in Resources */,
+				EB9C32C528CAD58F003C63A9 /* photo.svg in Resources */,
+				EB9C32C128CAD588003C63A9 /* enterpig.png in Resources */,
+				EB9C32C028CAD588003C63A9 /* settingitng.png in Resources */,
+				EB9C32C828CAD596003C63A9 /* 500error.png in Resources */,
+				EB9C32BC28CAD57E003C63A9 /* moreicon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C57C6A86735401BF3ABEDA92 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AHanimalHilight/Pods-AHanimalHilight-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AHanimalHilight/Pods-AHanimalHilight-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AHanimalHilight/Pods-AHanimalHilight-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDD2D47B5360B18DC9CB0B4E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AHanimalHilight-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBA63A6928BC95B50069435E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBA63A7528BC95B50069435E /* ViewController.swift in Sources */,
+				EB9C32B128C750F7003C63A9 /* AHanimaColorCollection.swift in Sources */,
+				EBC9C38128C1D729008DB3DF /* SwiftTimer.swift in Sources */,
+				EBC9C38328C204E1008DB3DF /* AHanimaStickerToolView.swift in Sources */,
+				EBA63A8E28BC9B560069435E /* AHanimaBgScreenEditVC.swift in Sources */,
+				EB9C326C28C5EDC0003C63A9 /* AHanimaVideoPreviewVC.swift in Sources */,
+				EBC9C38928C20E41008DB3DF /* ManagerExtension.swift in Sources */,
+				EB9C32AF28C749BF003C63A9 /* AHanimaAddTextAlertView.swift in Sources */,
+				EB9C32AD28C736E3003C63A9 /* AHanimaSettingVC.swift in Sources */,
+				EBA63A9228BCA8920069435E /* AHanimaCollectionView.swift in Sources */,
+				EB9C32B928C895CD003C63A9 /* TextlayerAnimate.swift in Sources */,
+				EBB8B51B28C5A968001C4C04 /* AHanimaVideoAddTextVC.swift in Sources */,
+				EBA63A7128BC95B50069435E /* AppDelegate.swift in Sources */,
+				EBB8B51928C5A730001C4C04 /* AnimationVideoManager.swift in Sources */,
+				EBA63A9428BDA94D0069435E /* AHanimaCollecToolView.swift in Sources */,
+				EB9C32B828C895CD003C63A9 /* TextAnimationBaseLayer.swift in Sources */,
+				EBA63A7328BC95B50069435E /* SceneDelegate.swift in Sources */,
+				EB9C32B328C75108003C63A9 /* AHanimaFontCollection.swift in Sources */,
+				EBA63A8D28BC9B560069435E /* AHaniHomeVC.swift in Sources */,
+				EB9C32B528C84216003C63A9 /* AHanimaVideoOnlySaveVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EBA63A7628BC95B50069435E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBA63A7728BC95B50069435E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EBA63A7B28BC95B80069435E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBA63A7C28BC95B80069435E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EBA63A7F28BC95B80069435E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EBA63A8028BC95B80069435E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBA63A8228BC95B80069435E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 797A394669B8B02510DDCF78 /* Pods-AHanimalHilight.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.0.0;
+				DEVELOPMENT_TEAM = 97Y24FFSPP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AHanimalHilight/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HilightVideo;
+				INFOPLIST_KEY_NSCameraUsageDescription = "App needs your camera permission to take photo and edit it shape, mask, cut it, add stickers, text and other effect.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "App needs your photo gallery permission to choose photo, and apply the shape editor, video cut, sticker, text and other effect.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "App needs your photo gallery permission to choose and save photo, and apply the shape editor, video cut, sticker, textand other effect.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to personalize ads to you";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xx.test.888888;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EBA63A8328BC95B80069435E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38C497775EAD7D7D99EA1533 /* Pods-AHanimalHilight.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.0.0;
+				DEVELOPMENT_TEAM = 97Y24FFSPP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AHanimalHilight/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HilightVideo;
+				INFOPLIST_KEY_NSCameraUsageDescription = "App needs your camera permission to take photo and edit it shape, mask, cut it, add stickers, text and other effect.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "App needs your photo gallery permission to choose photo, and apply the shape editor, video cut, sticker, text and other effect.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "App needs your photo gallery permission to choose and save photo, and apply the shape editor, video cut, sticker, textand other effect.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to personalize ads to you";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xx.test.888888;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBA63A6828BC95B50069435E /* Build configuration list for PBXProject "AHanimalHilight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBA63A7F28BC95B80069435E /* Debug */,
+				EBA63A8028BC95B80069435E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBA63A8128BC95B80069435E /* Build configuration list for PBXNativeTarget "AHanimalHilight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBA63A8228BC95B80069435E /* Debug */,
+				EBA63A8328BC95B80069435E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBA63A6528BC95B50069435E /* Project object */;
+}
