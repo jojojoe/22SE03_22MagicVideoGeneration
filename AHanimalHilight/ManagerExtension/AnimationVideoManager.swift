@@ -21,6 +21,8 @@ class AnimationVideoManager {
         
     static let shared = AnimationVideoManager()
     
+//    var exportSession: AVAssetExportSession!
+    
     private let outputPath: URL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("imagesComposition.mp4")
     private let url = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("baseVideo.mp4")
     private var eachImageDuration: CGFloat = 3
@@ -79,13 +81,16 @@ class AnimationVideoManager {
             videoWriter.finishWriting { [weak self] in
                 switch videoWriter.status {
                 case .completed:
-                    self?.videoResource = self?.url.absoluteString
-                    self?.imagesVideoAnimation(with: images, audioUrl: audioUrl, success: success, failure: failure)
+                    DispatchQueue.main.async {
+                        self?.videoResource = self?.url.absoluteString
+                        self?.imagesVideoAnimation(with: images, audioUrl: audioUrl, success: success, failure: failure)
+                    }
+                    
                 default:
                     failure(videoWriter.error)
                 }
             }
-        }catch {
+        } catch {
             failure(error)
         }
         
@@ -172,22 +177,26 @@ class AnimationVideoManager {
         let layerinstruction = AVMutableVideoCompositionLayerInstruction(assetTrack: videotrack)
         instruction.layerInstructions = [layerinstruction]
         layercomposition.instructions = [instruction]
-
+        
         guard let assetExport = AVAssetExportSession(asset: composition, presetName:AVAssetExportPresetHighestQuality) else {return}
-        assetExport.videoComposition = layercomposition
-        assetExport.outputFileType = AVFileType.mp4
-        assetExport.outputURL = outputPath
-        assetExport.audioMix = audioMix(audioUrl: audioUrl, composition: composition, timerange: timerange)
-        assetExport.exportAsynchronously(completionHandler: { [weak self] in
+        var exportSession: AVAssetExportSession!
+        exportSession = assetExport
+        exportSession.videoComposition = layercomposition
+        exportSession.outputFileType = AVFileType.mp4
+        exportSession.outputURL = outputPath
+        exportSession.audioMix = audioMix(audioUrl: audioUrl, composition: composition, timerange: timerange)
+        exportSession.exportAsynchronously(completionHandler: { [weak self] in
             guard let weakSelf = self else {
                 failure(NSError.init() as Error)
                 return
             }
-            switch assetExport.status{
+            //weakSelf.
+            switch exportSession.status{
             case AVAssetExportSession.Status.completed:
                 success(weakSelf.outputPath)
             default:
-                failure(assetExport.error)
+                //weakSelf.
+                failure(exportSession.error)
             }
         })
     }

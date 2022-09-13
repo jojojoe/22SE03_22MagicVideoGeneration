@@ -52,7 +52,7 @@ class AHaniManager: NSObject {
         
         //
         colorStrList = ["#FFFFFF", "#000000", "#B8E986", "#50E3C2", "#FC6076", "#4A90E2", "#DB309A", "#FFB125", "#7ED321", "#9013FE", "#FFF4E0", "#6E7A91"]
-        fontStrList = ["AvenirNext-Medium", "Cochin-Italic","Baskerville-Italic", "CourierNewPSMT", "Galvji", "GillSans", "Menlo-Regular", "SavoyeLetPlain"]
+        fontStrList = ["AvenirNext-Medium", "Cochin-Italic","Baskerville-Italic", "Galvji", "GillSans", "Menlo-Regular", "SavoyeLetPlain"]
     }
     
     

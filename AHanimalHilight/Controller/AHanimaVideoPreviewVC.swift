@@ -107,36 +107,40 @@ class AHanimaVideoPreviewVC: AVPlayerViewController {
         titleNameLabel.textColor = UIColor.white
         titleNameLabel.text = "PREVIEW"
         
-        NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidPlayToEndTimeNotification(notifi: )), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.player?.currentItem)
+//        NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidPlayToEndTimeNotification(notifi: )), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.player?.currentItem)
     }
     
-    @objc func playerItemDidPlayToEndTimeNotification(notifi: Notification) {
-        debugPrint("save vc reset play")
+//    @objc func playerItemDidPlayToEndTimeNotification(notifi: Notification) {
+//        debugPrint("save vc reset play")
 //        if let playerItem = notifi.object as? AVPlayerItem {
 //            if let avitem = self.player?.currentItem ,avitem == playerItem {
 //                resetPlay()
 //            }
 //        }
-    }
+//    }
     
     
-    func resetPlay() {
-        seek(to: CMTime.zero) { (isFinished) in
-            if isFinished {
-                self.player?.play()
-            }
-        }
-    }
-    
-    func seek(to time: CMTime, comletion: ((Bool) -> Void)? = nil) {
-        self.player?.seek(to: time, toleranceBefore: .zero, toleranceAfter: .zero) { (isFinished) in
-            comletion?(isFinished)
-        }
-    }
+//    func resetPlay() {
+//        seek(to: CMTime.zero) { (isFinished) in
+//            if isFinished {
+//                self.player?.play()
+//            }
+//        }
+//    }
+//
+//    func seek(to time: CMTime, comletion: ((Bool) -> Void)? = nil) {
+//        self.player?.seek(to: time, toleranceBefore: .zero, toleranceAfter: .zero) { (isFinished) in
+//            comletion?(isFinished)
+//        }
+//    }
     
     func saveAction() {
+        self.player?.pause()
         requestLibraryAuthorization { [weak self] (status) in
             guard let self = self else { return }
+            DispatchQueue.main.async {
+                KRProgressHUD.show()
+            }
             self.exportVideo()
         }
     }
@@ -156,22 +160,25 @@ class AHanimaVideoPreviewVC: AVPlayerViewController {
         
         exportSession = videoLab.makeExportSession(presetName: AVAssetExportPresetHighestQuality, outputURL: outputURL)
         exportSession?.exportAsynchronously(completionHandler: {
-            switch self.exportSession?.status {
-            case .completed:
-                
-                DispatchQueue.main.async {
+            DispatchQueue.main.async {
+                KRProgressHUD.dismiss()
+                switch self.exportSession?.status {
+                case .completed:
+                    
                     self.saveFileToAlbum(outputURL)
                     print("export completed")
-//                    self.showSaveAlert(alertStr: "Saved Successfully!")
-                 
+                    self.showSaveAlert(alertStr: "Saved Successfully!")
+                    
+                case .failed:
+                    print("export failed")
+                    self.showSaveAlert(alertStr: "Saved Failed!")
+                case .cancelled:
+                    print("export cancelled")
+                default:
+                    print("export")
                 }
-            case .failed:
-                print("export failed")
-            case .cancelled:
-                print("export cancelled")
-            default:
-                print("export")
             }
+            
         })
     }
     
@@ -201,18 +208,18 @@ class AHanimaVideoPreviewVC: AVPlayerViewController {
     
      func showSaveAlert(alertStr: String) {
          let alert = UIAlertController(title: alertStr, message: "", preferredStyle: .alert)
-         let homeAction = UIAlertAction(title: "New one", style: .default) { _ in
+         let homeAction = UIAlertAction(title: "Remake", style: .default) { _ in
              DispatchQueue.main.async {
                  self.navigationController?.popToRootViewController(animated: true)
              }
          }
-         let againAction = UIAlertAction(title: "重新制作", style: .default) { _ in
-             DispatchQueue.main.async {
-                 self.navigationController?.popViewController(animated: true)
-             }
-         }
+//         let againAction = UIAlertAction(title: "重新制作", style: .default) { _ in
+//             DispatchQueue.main.async {
+//                 self.navigationController?.popViewController(animated: true)
+//             }
+//         }
          alert.addAction(homeAction)
-         alert.addAction(againAction)
+//         alert.addAction(againAction)
          self.present(alert, animated: true)
      }
 }

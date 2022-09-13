@@ -111,7 +111,19 @@ extension AHanimaCollectionView {
             if let cell_m = cell as? AHanimaPreviewCell {
                 let bigCell = AHanimaPreviewCell()
                 bigCell.contentImgV.image = cell_m.contentImgV.image
+                
                 bigCell.frame = CGRect(x: cell_m.frame.origin.x * scale - cell.frame.size.width * scale, y: cell_m.frame.origin.y * scale - cell.frame.size.height * scale, width: cell.frame.size.width * scale, height: cell.frame.size.height * scale)
+                //
+                
+                if let item_m = currentShapeItem {
+                    if item_m.big == "ic_phtoto_no" {
+                        bigCell.contentImgV.mask = nil
+                    } else {
+                        let shapeV = UIImageView(frame: bigCell.bounds)
+                        shapeV.image = UIImage(named: item_m.big)
+                        bigCell.contentImgV.mask = shapeV
+                    }
+                }
                 
                 bigCell.contentImgV.transform = cell_m.contentImgV.transform
                 bigCell.transform = cell_m.transform

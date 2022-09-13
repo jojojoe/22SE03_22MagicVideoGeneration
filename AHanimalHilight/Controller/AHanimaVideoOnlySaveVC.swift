@@ -47,7 +47,7 @@ class AHanimaVideoOnlySaveVC: UIViewController {
     }
     
     deinit {
-        NotificationCenter.default.removeObserver(self)
+//        NotificationCenter.default.removeObserver(self)
     }
     
     override func viewDidLayoutSubviews() {
@@ -134,7 +134,7 @@ extension AHanimaVideoOnlySaveVC {
         playerController.player = self.avplayer
         self.addChild(playerController)
         view.addSubview(playerController.view)
-        playerController.showsPlaybackControls = false
+//        playerController.showsPlaybackControls = false
         
         //
         let vheight: CGFloat = view.frame.maxY
@@ -142,7 +142,7 @@ extension AHanimaVideoOnlySaveVC {
         
         self.avplayer.play()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidPlayToEndTimeNotification(notifi: )), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: avItem)
+//        NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidPlayToEndTimeNotification(notifi: )), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: avItem)
     }
 
     @objc func playerItemDidPlayToEndTimeNotification(notifi: Notification) {
@@ -194,23 +194,22 @@ extension AHanimaVideoOnlySaveVC {
                 }
             }
         }
-
     }
    
     func showSaveAlert(alertStr: String) {
         let alert = UIAlertController(title: alertStr, message: "", preferredStyle: .alert)
-        let homeAction = UIAlertAction(title: "New one", style: .default) { _ in
+        let homeAction = UIAlertAction(title: "Remake", style: .default) { _ in
             DispatchQueue.main.async {
                 self.navigationController?.popToRootViewController(animated: true)
             }
         }
-        let againAction = UIAlertAction(title: "重新制作", style: .default) { _ in
-            DispatchQueue.main.async {
-                self.navigationController?.popViewController(animated: true)
-            }
-        }
+//        let againAction = UIAlertAction(title: "重新制作", style: .default) { _ in
+//            DispatchQueue.main.async {
+//                self.navigationController?.popViewController(animated: true)
+//            }
+//        }
         alert.addAction(homeAction)
-        alert.addAction(againAction)
+//        alert.addAction(againAction)
         self.present(alert, animated: true)
     }
 }

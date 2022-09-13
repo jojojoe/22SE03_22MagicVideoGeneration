@@ -19,7 +19,7 @@ class AHanimaBgScreenEditVC: UIViewController {
     let addTextAlertV = AHanimaAddTextAlertView()
     let textInputVC = AHanimaVideoAddTextVC()
     var userImg: UIImage
-    
+    let bgBtn = UIButton()
     
     init(userImg: UIImage) {
         self.userImg = userImg
@@ -46,13 +46,20 @@ class AHanimaBgScreenEditVC: UIViewController {
         }
          
         //
+        view.addSubview(bgBtn)
+        bgBtn.snp.makeConstraints {
+            $0.left.right.top.bottom.equalToSuperview()
+        }
+        bgBtn.addTarget(self, action: #selector(bgBtnClick(sender: )), for: .touchUpInside)
+        bgBtn.alpha = 0
+        //
         
         view.addSubview(toolV)
         toolV.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-24)
             $0.left.equalToSuperview().offset(24)
-            $0.height.equalTo(340)
+            $0.height.equalTo(380)
         }
         toolV.backClickBlock = {
             [weak self] in
@@ -79,7 +86,13 @@ class AHanimaBgScreenEditVC: UIViewController {
                 self.updateMaskShapeItem(item: shapeItem)
             }
         }
-        
+        toolV.colorCollection.colorSelectBlock = {
+            [weak self] colorStr, pro in
+            guard let `self` = self else {return}
+            DispatchQueue.main.async {
+                self.bgEffectV.contentBgV.backgroundColor = UIColor(hexString: colorStr)
+            }
+        }
         toolV.sizeSlideChangeBlock = {
             [weak self] valuem in
             guard let `self` = self else {return}
@@ -94,6 +107,8 @@ class AHanimaBgScreenEditVC: UIViewController {
                 self.updateCollectionPadding(value: valuem)
             }
         }
+        self.updateCollectionPadding(value: 0.9)
+        
         toolV.horSlideChangeBlock = {
             [weak self] valuem in
             guard let `self` = self else {return}
@@ -270,6 +285,7 @@ extension AHanimaBgScreenEditVC {
             guard let `self` = self else {return}
             self.addTextAlertV.alpha = 1
             self.toolV.alpha = 0
+            self.bgBtn.alpha = 1
         } completion: {[weak self] (finished) in
             guard let `self` = self else {return}
             DispatchQueue.main.async {
@@ -316,6 +332,19 @@ extension AHanimaBgScreenEditVC {
             print(error as Any)
         }
     }
+    
+    
+    @objc func bgBtnClick(sender: UIButton) {
+        if addTextAlertV.alpha == 1 {
+            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut) {
+                self.addTextAlertV.alpha = 0
+                self.toolV.alpha = 1
+                self.bgBtn.alpha = 0
+            } completion: { _ in
+                
+            }
+        }
+    }
 }
 
 extension AHanimaBgScreenEditVC {
@@ -353,7 +382,10 @@ extension AHanimaBgScreenEditVC {
         let controller = AHanimaVideoPreviewVC(videoLab: videoLab)
         controller.player = AVPlayer(playerItem: playerItem)
         if let synchronizedLayer = makeSynchronizedLayer(playerItem: playerItem, videoLab: videoLab) {
-            controller.view.layer.addSublayer(synchronizedLayer)
+            DispatchQueue.main.async {
+                
+                controller.view.layer.addSublayer(synchronizedLayer)
+            }
         }
         
         navigationController?.pushViewController(controller, animated: true)
@@ -363,22 +395,23 @@ extension AHanimaBgScreenEditVC {
     func makeTextAnimationLayer(videoWidth: CGFloat, videoHeight: CGFloat, textStr: String, fontStr: String, colorStr: String) -> TextOpacityAnimationLayer {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .center
+//        paragraphStyle.
         let attributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont(name: fontStr, size: 180) ?? UIFont.systemFont(ofSize: 180),
+            .font: UIFont(name: fontStr, size: 100) ?? UIFont.systemFont(ofSize: 100),
             .foregroundColor: UIColor(hexString: colorStr) ?? UIColor.white,
             .paragraphStyle: paragraphStyle
         ]
         let attributedString = NSAttributedString(string: textStr, attributes: attributes)
         
-        let size = attributedString.boundingRect(with: CGSize(width: videoWidth, height: CGFloat.infinity),
+        let size = attributedString.boundingRect(with: CGSize(width: videoWidth - 50, height: CGFloat.infinity),
                                                  options: .usesLineFragmentOrigin,
                                                  context: nil).size
         
         let layer = TextOpacityAnimationLayer()
         layer.attributedText = attributedString
-        layer.position = CGPoint(x: videoWidth/2, y: videoHeight/2)
-        layer.bounds = CGRect(origin: CGPoint.zero, size: size)
-
+        layer.position = CGPoint(x: videoWidth/2, y: videoHeight/2 + 0)
+        layer.bounds = CGRect(origin: CGPoint.zero, size: CGSize(width: videoWidth, height: size.height))
+        debugPrint("layer.bounds = \(layer.bounds)")
         return layer
     }
     

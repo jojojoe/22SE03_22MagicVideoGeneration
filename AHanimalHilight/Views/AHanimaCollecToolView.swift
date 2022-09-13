@@ -17,7 +17,7 @@ class AHanimaCollecToolView: UIView {
     var backClickBlock: (()->Void)?
     var nextClickBlock: (()->Void)?
     let shapeCollection = AHanimaStickerToolView()
-    
+    let colorCollection = AHanimaColorCollection()
     override init(frame: CGRect) {
         super.init(frame: frame)
         buildContentView()
@@ -40,10 +40,18 @@ class AHanimaCollecToolView: UIView {
         }
         //
         
+        addSubview(colorCollection)
+        colorCollection.snp.makeConstraints {
+            $0.left.right.equalToSuperview()
+            $0.height.equalTo(36)
+            $0.top.equalToSuperview().offset(25)
+        }
+        //
+        
         addSubview(shapeCollection)
         shapeCollection.snp.makeConstraints {
             $0.left.right.equalToSuperview()
-            $0.top.equalToSuperview().offset(30)
+            $0.top.equalToSuperview().offset(70)
             $0.height.equalTo(30)
         }
      
@@ -59,14 +67,15 @@ class AHanimaCollecToolView: UIView {
         sizeSlider.snp.makeConstraints {
             $0.height.equalTo(30)
             $0.right.equalToSuperview().offset(-30)
-            $0.left.equalToSuperview().offset(60)
-            $0.top.equalToSuperview().offset(80)
+            $0.left.equalToSuperview().offset(80)
+            $0.top.equalTo(shapeCollection.snp.bottom).offset(18)
         }
         sizeSlider.addTarget(self, action: #selector(sizeSliderValueChange(sender: )), for: .valueChanged)
         let sizeLabel = UILabel()
-        sizeLabel.text = "LP"
+        sizeLabel.text = "Size"
         sizeLabel.textColor = UIColor.white
         sizeLabel.textAlignment = .center
+        sizeLabel.adjustsFontSizeToFitWidth = true
         addSubview(sizeLabel)
         sizeLabel.snp.makeConstraints {
             $0.centerY.equalTo(sizeSlider)
@@ -83,18 +92,19 @@ class AHanimaCollecToolView: UIView {
         paddingSlider.maximumTrackTintColor = UIColor(hexString: "#848484")!
         paddingSlider.minimumValue = 0.5
         paddingSlider.maximumValue = 1
-        paddingSlider.value = 1
+        paddingSlider.value = 0.9
         paddingSlider.snp.makeConstraints {
             $0.height.equalTo(30)
             $0.right.equalToSuperview().offset(-30)
-            $0.left.equalToSuperview().offset(60)
+            $0.left.equalToSuperview().offset(80)
             $0.top.equalTo(sizeSlider.snp.bottom).offset(5)
         }
         paddingSlider.addTarget(self, action: #selector(paddingSliderValueChange(sender: )), for: .valueChanged)
         let paddingLabel = UILabel()
-        paddingLabel.text = "LP"
+        paddingLabel.text = "Distance"
         paddingLabel.textColor = UIColor.white
         paddingLabel.textAlignment = .center
+        paddingLabel.adjustsFontSizeToFitWidth = true
         addSubview(paddingLabel)
         paddingLabel.snp.makeConstraints {
             $0.centerY.equalTo(paddingSlider)
@@ -116,14 +126,15 @@ class AHanimaCollecToolView: UIView {
         horSlider.snp.makeConstraints {
             $0.height.equalTo(30)
             $0.right.equalToSuperview().offset(-30)
-            $0.left.equalToSuperview().offset(60)
+            $0.left.equalToSuperview().offset(80)
             $0.top.equalTo(paddingSlider.snp.bottom).offset(5)
         }
         horSlider.addTarget(self, action: #selector(horSliderValueChange(sender: )), for: .valueChanged)
         let horLabel = UILabel()
-        horLabel.text = "LP"
+        horLabel.text = "Horizontal"
         horLabel.textColor = UIColor.white
         horLabel.textAlignment = .center
+        horLabel.adjustsFontSizeToFitWidth = true
         addSubview(horLabel)
         horLabel.snp.makeConstraints {
             $0.centerY.equalTo(horSlider)
@@ -143,14 +154,15 @@ class AHanimaCollecToolView: UIView {
         verSlider.snp.makeConstraints {
             $0.height.equalTo(30)
             $0.right.equalToSuperview().offset(-30)
-            $0.left.equalToSuperview().offset(60)
+            $0.left.equalToSuperview().offset(80)
             $0.top.equalTo(horSlider.snp.bottom).offset(5)
         }
         verSlider.addTarget(self, action: #selector(verSliderValueChange(sender: )), for: .valueChanged)
         let verLabel = UILabel()
-        verLabel.text = "LP"
+        verLabel.text = "Vertical"
         verLabel.textColor = UIColor.white
         verLabel.textAlignment = .center
+        verLabel.adjustsFontSizeToFitWidth = true
         addSubview(verLabel)
         verLabel.snp.makeConstraints {
             $0.centerY.equalTo(verSlider)
@@ -171,14 +183,15 @@ class AHanimaCollecToolView: UIView {
         rotateSlider.snp.makeConstraints {
             $0.height.equalTo(30)
             $0.right.equalToSuperview().offset(-30)
-            $0.left.equalToSuperview().offset(60)
+            $0.left.equalToSuperview().offset(80)
             $0.top.equalTo(verSlider.snp.bottom).offset(5)
         }
         rotateSlider.addTarget(self, action: #selector(rotateSliderValueChange(sender: )), for: .valueChanged)
         let rotateLabel = UILabel()
-        rotateLabel.text = "LP"
+        rotateLabel.text = "Rotate"
         rotateLabel.textColor = UIColor.white
         rotateLabel.textAlignment = .center
+        rotateLabel.adjustsFontSizeToFitWidth = true
         addSubview(rotateLabel)
         rotateLabel.snp.makeConstraints {
             $0.centerY.equalTo(rotateSlider)

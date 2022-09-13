@@ -26,6 +26,7 @@
 		EB9C32C928CAD596003C63A9 /* mine.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9C32C728CAD596003C63A9 /* mine.png */; };
 		EB9C32CC28CAD5A0003C63A9 /* IMG_0405.JPG in Resources */ = {isa = PBXBuildFile; fileRef = EB9C32CA28CAD59F003C63A9 /* IMG_0405.JPG */; };
 		EB9C32CD28CAD5A0003C63A9 /* 404error.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9C32CB28CAD5A0003C63A9 /* 404error.png */; };
+		EB9C32CF28CB4276003C63A9 /* AHanimaTermsPrivateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9C32CE28CB4276003C63A9 /* AHanimaTermsPrivateVC.swift */; };
 		EBA63A7128BC95B50069435E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA63A7028BC95B50069435E /* AppDelegate.swift */; };
 		EBA63A7328BC95B50069435E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA63A7228BC95B50069435E /* SceneDelegate.swift */; };
 		EBA63A7528BC95B50069435E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA63A7428BC95B50069435E /* ViewController.swift */; };
@@ -65,6 +66,7 @@
 		EB9C32C728CAD596003C63A9 /* mine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine.png; sourceTree = "<group>"; };
 		EB9C32CA28CAD59F003C63A9 /* IMG_0405.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0405.JPG; sourceTree = "<group>"; };
 		EB9C32CB28CAD5A0003C63A9 /* 404error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 404error.png; sourceTree = "<group>"; };
+		EB9C32CE28CB4276003C63A9 /* AHanimaTermsPrivateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHanimaTermsPrivateVC.swift; sourceTree = "<group>"; };
 		EBA63A6D28BC95B50069435E /* AHanimalHilight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AHanimalHilight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA63A7028BC95B50069435E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBA63A7228BC95B50069435E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				EB9C32C328CAD58F003C63A9 /* photo.svg */,
 				EBA63A8B28BC9B560069435E /* AHaniHomeVC.swift */,
 				EB9C32AC28C736E3003C63A9 /* AHanimaSettingVC.swift */,
+				EB9C32CE28CB4276003C63A9 /* AHanimaTermsPrivateVC.swift */,
 				EBA63A8C28BC9B560069435E /* AHanimaBgScreenEditVC.swift */,
 				EBB8B51A28C5A968001C4C04 /* AHanimaVideoAddTextVC.swift */,
 				EB9C326B28C5EDC0003C63A9 /* AHanimaVideoPreviewVC.swift */,
@@ -331,6 +334,7 @@
 			files = (
 				EBA63A7528BC95B50069435E /* ViewController.swift in Sources */,
 				EB9C32B128C750F7003C63A9 /* AHanimaColorCollection.swift in Sources */,
+				EB9C32CF28CB4276003C63A9 /* AHanimaTermsPrivateVC.swift in Sources */,
 				EBC9C38128C1D729008DB3DF /* SwiftTimer.swift in Sources */,
 				EBC9C38328C204E1008DB3DF /* AHanimaStickerToolView.swift in Sources */,
 				EBA63A8E28BC9B560069435E /* AHanimaBgScreenEditVC.swift in Sources */,

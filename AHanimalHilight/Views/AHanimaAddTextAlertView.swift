@@ -49,7 +49,7 @@ class AHanimaAddTextAlertView: UIView {
         addSubview(contentTextLabel)
         contentTextLabel.font = UIFont(name: "Helvetica", size: 16)
         contentTextLabel.textColor = .black
-        contentTextLabel.text = "Whether you need to add text, add text and click OK to jump to the text editing page"
+        contentTextLabel.text = "Select \"OK\" if you want to add text to this image; click \"Skip\" if you don't want to."
         contentTextLabel.textAlignment = .center
         contentTextLabel.numberOfLines = 0
         contentTextLabel.snp.makeConstraints {
